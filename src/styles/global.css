@@ -61,7 +61,7 @@ h2 {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: white;
+  background-color: rgb(252, 192, 192);
   border-radius: 1rem;
 }
 
@@ -87,4 +87,13 @@ h2 {
   .hamburger {
     display: none;
   }
+}
+/* estilos oscuros*/
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
 }
