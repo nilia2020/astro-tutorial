@@ -1,12 +1,17 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+import { fade } from "astro:transitions";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Escrito por: {frontmatter.author}</p>
+  <p transition:animate={fade({ duration: "2s" })}>
+    <em>{frontmatter.description}</em>
+  </p>
+  <p>
+    Escrito por: <a class="link dark" href="/about/">{frontmatter.author}</a>
+  </p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
   <div class="tags">
     {
@@ -36,5 +41,15 @@ const { frontmatter } = Astro.props;
     padding: 0.5em 1em;
     font-size: 1.15em;
     background-color: #f8fcfd;
+  }
+
+  .link {
+    text-decoration: none;
+    font-size: larger;
+    margin-left: 0.5rem;
+  }
+
+  .dark.link {
+    color: rgb(229, 156, 249);
   }
 </style>

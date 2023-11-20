@@ -1,6 +1,6 @@
 ---
 title: Mi cuarta entrada en el blog
-author: Alumno de Astro
+author: Amelia
 description: "Esta entrada aparecerá sola!"
 image:
   url: "https://docs.astro.build/default-og-image.png"
