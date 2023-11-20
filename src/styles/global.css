@@ -21,8 +21,43 @@ h1 {
   text-align: center;
 }
 
+.dark .pageTitle {
+  color: rgb(252, 192, 192);
+}
+
 h2 {
   text-align: center;
+}
+
+.greeting {
+  text-align: center;
+}
+
+.greeting button {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: 0;
+}
+
+.dark .greeting button {
+  background-color: rgb(252, 192, 192);
+  color: #0d0b3d;
+}
+.dark .greeting button:hover {
+  background-color: rgb(241, 215, 215);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .subtitle {
+  font-size: 1.5rem;
 }
 
 /* estilos de la barra de navegación*/
@@ -69,6 +104,24 @@ h2 {
   display: unset;
 }
 
+.blogPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blogPost li {
+  list-style: none;
+  line-height: 200%;
+}
+.blogPost a {
+  text-decoration: none;
+  margin-inline: auto;
+  color: #4c1d95;
+}
+.dark .blogPost a {
+  color: rgb(216, 128, 241);
+}
+
 @media screen and (min-width: 636px) {
   .nav-links {
     /* margin-left: 5em; */
@@ -91,7 +144,7 @@ h2 {
 }
 /* estilos oscuros*/
 html.dark {
-  background-color: #0d0950;
+  background-color: #0d0b3d;
   color: #fff;
 }
 
